@@ -1,6 +1,6 @@
 # AllAboutThreads
 
-This is a simple and quick learning project to understand how Hibernate Annotations work.
+This is a simple and quick learning project to understand all anout threads and multi threading in Java
 
 Steps:
 

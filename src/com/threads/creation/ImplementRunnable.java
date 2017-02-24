@@ -1,6 +1,6 @@
-package com.threads.runners;
+package com.threads.creation;
 
-public class Runner implements Runnable {
+public class ImplementRunnable implements Runnable {
 
 	@Override
 	public void run() {

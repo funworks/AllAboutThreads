@@ -1,6 +1,6 @@
-package com.threads.tasks;
+package com.threads.creation;
 
-public class Task extends Thread {
+public class ExtendThread extends Thread {
 
 	/* (non-Javadoc)
 	 * @see java.lang.Thread#run()

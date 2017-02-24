@@ -1,13 +1,9 @@
-package com.threads.tasks;
+package com.threads.runners;
 
-public class Task extends Thread {
+public class Runner implements Runnable {
 
-	/* (non-Javadoc)
-	 * @see java.lang.Thread#run()
-	 */
 	@Override
 	public void run() {
-		super.run();
 		for (int i=1; i<=10; i++) {
 			System.out.println(Thread.currentThread().getName() + " - " + i);
 			try {
@@ -17,4 +13,5 @@ public class Task extends Thread {
 			}
 		}
 	}
+
 }

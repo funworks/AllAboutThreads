@@ -11,7 +11,7 @@ class Worker extends Thread {
 		while(shouldRun) {
 			System.out.println("Running... " + ++count);
 			try {
-				Thread.sleep(250);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
@@ -35,5 +35,4 @@ public class UseVolatile {
 		Thread.sleep(500);
 		w.stopRunning();
 	}
-
 }

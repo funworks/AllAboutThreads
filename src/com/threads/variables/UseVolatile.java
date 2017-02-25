@@ -24,7 +24,7 @@ class Worker extends Thread {
 }
 
 /**
- * @see <a href="https://double-quotes.blogspot.in/2017/02/real-life-interview-questions-and.html">https://double-quotes.blogspot.in/2017/02/real-life-interview-questions-and.html</a>
+ * @see <a href="https://double-quotes.blogspot.in/2017/02/volatile-variables.html">https://double-quotes.blogspot.in/2017/02/volatile-variables.html</a>
  */
 public class UseVolatile {
 

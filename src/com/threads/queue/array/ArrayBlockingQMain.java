@@ -3,6 +3,10 @@ package com.threads.queue.array;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * @see <a href="https://double-quotes.blogspot.in/2017/02/java-concurrency-utilities-blockingqueue.html">https://double-quotes.blogspot.in/2017/02/java-concurrency-utilities-blockingqueue.html</a>
+ *
+ */
 public class ArrayBlockingQMain {
 
 	public static void main(String[] args) throws InterruptedException {

@@ -13,12 +13,14 @@ public class ArrayBlockingQConsumer implements Runnable {
 	@Override
 	public void run() {
 		try {
-			for (int i = 1; i <= 10; i++) {
-				System.out.printf("[%s] - Take object = %s%n", Thread.currentThread().getName(), queue.take());
+			for (int i = 0; i < 10; i++) {
+				int value = (int) queue.take();
+				System.out.printf("[%s] - Pull object = %s, Remaining Capacity = %s%n", 
+						Thread.currentThread().getName(), value, queue.remainingCapacity());
+				Thread.sleep(700);
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
-
 }

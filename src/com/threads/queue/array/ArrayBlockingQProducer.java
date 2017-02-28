@@ -13,10 +13,11 @@ public class ArrayBlockingQProducer implements Runnable {
 	@Override
 	public void run() {
 		try {
-			for (int i=1;i <= 10; i++) {
-				System.out.printf("[%s] - Put object = %s%n", Thread.currentThread().getName(), i);
+			for (int i=0;i < 10; i++) {
 				queue.put(i);
-				Thread.sleep(300);
+				System.out.printf("[%s] - Push object = %s, Remaining Capacity = %s%n", 
+						Thread.currentThread().getName(), i, queue.remainingCapacity());
+				Thread.sleep(200);
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();

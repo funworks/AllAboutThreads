@@ -6,7 +6,8 @@ import java.util.concurrent.BlockingQueue;
 public class ArrayBlockingQMain {
 
 	public static void main(String[] args) throws InterruptedException {
-		BlockingQueue<Object> queue = new ArrayBlockingQueue<Object>(10);
+		BlockingQueue<Object> queue = new ArrayBlockingQueue<Object>(3);
+		System.out.println("Created ArrayBlockingQueue of size = " + queue.remainingCapacity());
 		
 		ArrayBlockingQProducer producer = new ArrayBlockingQProducer(queue);
 		ArrayBlockingQConsumer consumer = new ArrayBlockingQConsumer(queue);

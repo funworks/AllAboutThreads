@@ -1,12 +1,12 @@
-package com.threads.queue;
+package com.threads.queue.array;
 
 import java.util.concurrent.BlockingQueue;
 
-public class Consumer implements Runnable {
+public class ArrayBlockingQConsumer implements Runnable {
 	
 	private BlockingQueue<Object> queue;
 
-	public Consumer(BlockingQueue<Object> queue) {
+	public ArrayBlockingQConsumer(BlockingQueue<Object> queue) {
 		this.queue = queue;
 	}
 
@@ -14,7 +14,7 @@ public class Consumer implements Runnable {
 	public void run() {
 		try {
 			for (int i = 1; i <= 10; i++) {
-				System.out.println(queue.take());
+				System.out.printf("[%s] - Take object = %s%n", Thread.currentThread().getName(), queue.take());
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();

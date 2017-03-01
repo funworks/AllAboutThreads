@@ -19,8 +19,8 @@ public class DelayQProducer implements Runnable {
 	public void run() {
 		try {
 			for (int i=1;i <= 5; i++) {
-				DelayElement delayElement = new DelayElement(UUID.randomUUID().toString(), random.nextInt(20000));
-				System.out.printf("[%s] - Put object = %s%n", Thread.currentThread().getName() + i, delayElement);
+				DelayElement delayElement = new DelayElement(UUID.randomUUID().toString(), random.nextInt(10000));
+				System.out.printf("[%s] - Push object = %s%n", Thread.currentThread().getName() + i, delayElement);
 				queue.put(delayElement);
 			}
 		} catch (InterruptedException e) {

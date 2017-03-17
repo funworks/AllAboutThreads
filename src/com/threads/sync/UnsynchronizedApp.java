@@ -4,17 +4,13 @@ package com.threads.sync;
  * @see <a href="https://double-quotes.blogspot.in/2017/02/simplified-synchronized.html">https://double-quotes.blogspot.in/2017/02/simplified-synchronized.html</a>
  *
  */
-public class SynchronizedApp {
+public class UnsynchronizedApp {
 	
 	private static int number = 0;
 	
-	private synchronized void increaseNumber() {
-		number++;
-	}
-
 	public static void main(String[] args) throws InterruptedException {
-		SynchronizedApp sa = new SynchronizedApp();
-		sa.action();
+		UnsynchronizedApp usa = new UnsynchronizedApp();
+		usa.action();
 	}
 
 	private void action() throws InterruptedException {
@@ -22,8 +18,7 @@ public class SynchronizedApp {
 			@Override
 			public void run() {
 				for (int i=1; i<=1000; i++) {
-					increaseNumber();
-					//number++;
+					number++;
 				}
 			}
 		};
